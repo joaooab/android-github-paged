@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		xmlns:tools="http://schemas.android.com/tools"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginHorizontal="8dp"
+		android:layout_marginVertical="8dp"
+		android:foreground="?android:attr/selectableItemBackground"
+		app:cardCornerRadius="8dp"
+		app:cardElevation="4dp">
+
+	<androidx.constraintlayout.widget.ConstraintLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+
+		<androidx.cardview.widget.CardView
+				android:id="@+id/cardImage"
+				android:layout_width="64dp"
+				android:layout_height="64dp"
+				android:layout_marginStart="16dp"
+				app:cardCornerRadius="8dp"
+				app:cardElevation="2dp"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="@id/linearLayoutCompat"
+				app:layout_constraintBottom_toBottomOf="@id/linearLayoutCompat">
+
+			<androidx.appcompat.widget.AppCompatImageView
+					android:id="@+id/image"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:scaleType="centerCrop"
+					tools:srcCompat="@drawable/ic_placeholder" />
+
+		</androidx.cardview.widget.CardView>
+
+		<androidx.appcompat.widget.LinearLayoutCompat
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_marginHorizontal="16dp"
+				android:minHeight="70dp"
+				android:orientation="vertical"
+				android:layout_marginVertical="16dp"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toEndOf="@id/cardImage"
+				app:layout_constraintTop_toTopOf="parent"
+				android:id="@+id/linearLayoutCompat">
+
+			<TextView
+					style="@style/TextSmallBold"
+					android:layout_weight="1"
+					android:id="@+id/textName"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:ellipsize="end"
+					android:gravity="center_vertical"
+					android:lines="1"
+					tools:text="kotlin" />
+
+			<TextView
+					style="@style/TextSmall"
+					android:layout_weight="1"
+					android:gravity="center_vertical"
+					android:id="@+id/textOwnerName"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:ellipsize="end"
+					android:lines="1"
+					tools:text="JetBrains" />
+
+		</androidx.appcompat.widget.LinearLayoutCompat>
+
+	</androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

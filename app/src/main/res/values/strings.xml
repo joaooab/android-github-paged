@@ -1,3 +1,8 @@
 <resources>
 	<string name="app_name">android-challenge-bankuish</string>
+
+	<string name="retry">Try again</string>
+
+	<string name="message_items_not_found">Ups… Items not found</string>
+	<string name="message_paging_error">Something wrong when fetching the repositories</string>
 </resources>

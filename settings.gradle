@@ -14,3 +14,6 @@ dependencyResolutionManagement {
 }
 rootProject.name = "android-challenge-bankuish"
 include ':app'
+include ':app:domain'
+include ':app:data:remote'
+include ':app:data:repository'
