@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		xmlns:tools="http://schemas.android.com/tools"
+		android:id="@+id/cardProject"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_margin="8dp"
+		app:cardCornerRadius="16dp"
+		app:cardElevation="4dp">
+
+	<androidx.constraintlayout.widget.ConstraintLayout
+
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+
+		<androidx.appcompat.widget.AppCompatTextView
+				style="@style/TextSmallBold"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_margin="16dp"
+				android:id="@+id/textLanguage"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent"
+				android:text="@string/statistic" />
+
+		<androidx.appcompat.widget.AppCompatImageView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				app:srcCompat="@drawable/ic_outline_star_24"
+				android:layout_marginTop="24dp"
+				android:id="@+id/starCount"
+				app:layout_constraintEnd_toStartOf="@id/forkCount"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@id/textLanguage" />
+
+		<androidx.appcompat.widget.AppCompatImageView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				app:srcCompat="@drawable/ic_outline_device_hub_24"
+				android:id="@+id/forkCount"
+				app:layout_constraintTop_toTopOf="@id/starCount"
+				app:layout_constraintStart_toEndOf="@id/starCount"
+				app:layout_constraintEnd_toStartOf="@id/watchCount" />
+
+		<androidx.appcompat.widget.AppCompatImageView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				app:srcCompat="@drawable/ic_outline_visibility_24"
+				android:id="@+id/watchCount"
+				app:layout_constraintStart_toEndOf="@id/forkCount"
+				app:layout_constraintTop_toTopOf="@id/starCount"
+				app:layout_constraintEnd_toEndOf="parent" />
+
+		<androidx.appcompat.widget.AppCompatTextView
+				style="@style/TitleSmallBold"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginBottom="24dp"
+				app:layout_constraintStart_toStartOf="@+id/starCount"
+				app:layout_constraintTop_toBottomOf="@id/starCount"
+				app:layout_constraintEnd_toEndOf="@+id/starCount"
+				tools:text="10"
+				android:id="@+id/textStar"
+				app:layout_constraintBottom_toBottomOf="parent" />
+
+		<androidx.appcompat.widget.AppCompatTextView
+				style="@style/TitleSmallBold"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:id="@+id/textFork"
+				app:layout_constraintTop_toBottomOf="@id/forkCount"
+				app:layout_constraintEnd_toEndOf="@+id/forkCount"
+				app:layout_constraintStart_toStartOf="@+id/forkCount"
+				tools:text="10"
+				app:layout_constraintBottom_toBottomOf="@id/textStar" />
+
+		<androidx.appcompat.widget.AppCompatTextView
+				style="@style/TitleSmallBold"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:id="@+id/textWatch"
+				app:layout_constraintTop_toBottomOf="@id/watchCount"
+				app:layout_constraintEnd_toEndOf="@id/watchCount"
+				app:layout_constraintStart_toStartOf="@id/watchCount"
+				tools:text="10"
+				app:layout_constraintBottom_toBottomOf="@id/textFork" />
+	</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

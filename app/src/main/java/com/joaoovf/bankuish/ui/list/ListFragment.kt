@@ -2,6 +2,7 @@ package com.joaoovf.bankuish.ui.list
 
 import android.os.Bundle
 import android.view.View
+import androidx.navigation.fragment.findNavController
 import androidx.paging.CombinedLoadStates
 import androidx.paging.LoadState
 import com.google.android.material.snackbar.Snackbar
@@ -18,7 +19,9 @@ class ListFragment : BaseFragment<FragmentListBinding>(FragmentListBinding::infl
 
 	private val viewModel: ListViewModel by viewModel()
 	private val adapter = ListAdapter {
-
+		findNavController().navigate(
+			ListFragmentDirections.actionNavigationListToDetailFragment(it)
+		)
 	}
 
 	override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -27,7 +30,7 @@ class ListFragment : BaseFragment<FragmentListBinding>(FragmentListBinding::infl
 	}
 
 	private fun setupView() {
-		binding.showList.adapter = adapter
+		binding.list.adapter = adapter
 		collectPagingData()
 		collectStateAdapter()
 	}
@@ -37,21 +40,21 @@ class ListFragment : BaseFragment<FragmentListBinding>(FragmentListBinding::infl
 			when (state.source.refresh) {
 				is LoadState.Loading -> {
 					binding.apply {
-						showLoading.show()
-						showList.gone()
+						loading.show()
+						list.gone()
 						includeEmpty.root.gone()
 					}
 				}
 				is LoadState.Error -> {
 					binding.apply {
-						showLoading.gone()
+						loading.gone()
 						showList(state)
 					}
 					showLoadingStateError()
 				}
 				else -> {
 					binding.apply {
-						showLoading.gone()
+						loading.gone()
 						showList(state)
 					}
 				}
@@ -61,10 +64,10 @@ class ListFragment : BaseFragment<FragmentListBinding>(FragmentListBinding::infl
 
 	private fun FragmentListBinding.showList(state: CombinedLoadStates) {
 		if (isEmptyResult(state)) {
-			showList.gone()
+			list.gone()
 			includeEmpty.root.show()
 		} else {
-			showList.show()
+			list.show()
 			includeEmpty.root.gone()
 		}
 	}

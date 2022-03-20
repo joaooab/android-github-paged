@@ -1,5 +1,9 @@
 package com.joaoovf.bankuish.domain.model
 
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
+
+@Parcelize
 data class Project(
 	val id: Int?,
 	val name: String,
@@ -11,4 +15,4 @@ data class Project(
 	val contributorsUrl: String?,
 	val languagesUrl: String?,
 	val owner: Owner?,
-)
+): Parcelable
