@@ -6,11 +6,22 @@
         <entry key="app/domain/src/main/res/drawable/ic_placeholder.xml" value="0.119" />
         <entry key="app/domain/src/main/res/drawable/ic_placeholder_error.xml" value="0.119" />
         <entry key="app/src/main/res/drawable/ic_image.xml" value="0.119" />
+        <entry key="app/src/main/res/drawable/ic_outline_device_hub_24.xml" value="0.119" />
+        <entry key="app/src/main/res/drawable/ic_outline_star_24.xml" value="0.119" />
+        <entry key="app/src/main/res/drawable/ic_outline_visibility_24.xml" value="0.119" />
         <entry key="app/src/main/res/drawable/iv_empty.xml" value="0.119" />
+        <entry key="app/src/main/res/drawable/shape_blue_circle.xml" value="0.119" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.3246951219512195" />
+        <entry key="app/src/main/res/layout/fragment_detail.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/fragment_detail_statistic.xml" value="0.32760416666666664" />
         <entry key="app/src/main/res/layout/fragment_list.xml" value="0.3416666666666667" />
+        <entry key="app/src/main/res/layout/include_detail_contributors.xml" value="0.25729166666666664" />
+        <entry key="app/src/main/res/layout/include_detail_language.xml" value="0.2713541666666667" />
+        <entry key="app/src/main/res/layout/include_detail_project.xml" value="0.22552083333333334" />
         <entry key="app/src/main/res/layout/include_empty.xml" value="0.75" />
+        <entry key="app/src/main/res/layout/item_circle_image.xml" value="0.67" />
         <entry key="app/src/main/res/layout/item_project.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/item_topic.xml" value="0.22552083333333334" />
       </map>
     </option>
   </component>

@@ -6,7 +6,7 @@
 		android:layout_height="match_parent">
 
 	<androidx.recyclerview.widget.RecyclerView
-			android:id="@+id/showList"
+			android:id="@+id/list"
 			android:layout_width="0dp"
 			android:layout_height="0dp"
 			android:paddingVertical="16dp"
@@ -30,7 +30,7 @@
 
 	<ProgressBar
 			style="?android:attr/progressBarStyleLarge"
-			android:id="@+id/showLoading"
+			android:id="@+id/loading"
 			app:layout_constraintStart_toStartOf="parent"
 			app:layout_constraintEnd_toEndOf="parent"
 			app:layout_constraintBottom_toBottomOf="parent"

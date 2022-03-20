@@ -9,5 +9,18 @@
 			android:id="@+id/navigation_list"
 			android:name="com.joaoovf.bankuish.ui.list.ListFragment"
 			android:label="ListFragment"
-			tools:layout="@layout/fragment_list" />
+			tools:layout="@layout/fragment_list" >
+		<action
+				android:id="@+id/action_navigation_list_to_detailFragment"
+				app:destination="@id/detailFragment" />
+	</fragment>
+	<fragment
+			android:id="@+id/detailFragment"
+			android:name="com.joaoovf.bankuish.ui.detail.DetailFragment"
+			android:label="DetailFragment"
+			tools:layout="@layout/fragment_detail" >
+		<argument
+				android:name="project"
+				app:argType="com.joaoovf.bankuish.domain.model.Project" />
+	</fragment>
 </navigation>
