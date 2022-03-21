@@ -1,78 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="CustomTextStyle" parent="@style/TextAppearance.AppCompat">
-        <item name="android:textColor">@color/black</item>
-    </style>
+	<style name="CustomTextStyle" parent="@style/Theme.Androidchallengebankuish">
+		<item name="android:textColor">?android:textColorPrimary</item>
+	</style>
 
-    <style name="TextFontRegular" parent="CustomTextStyle" />
+	<style name="TextFontRegular" parent="CustomTextStyle" />
 
-    <style name="TextFontBold" parent="CustomTextStyle">
-        <item name="android:textStyle">bold</item>
-    </style>
+	<style name="TextFontBold" parent="CustomTextStyle">
+		<item name="android:textStyle">bold</item>
+	</style>
 
-    <style name="TitleLarge" parent="TextFontRegular">
-        <item name="android:textSize">48sp</item>
-    </style>
+	<style name="TitleLarge" parent="TextFontRegular">
+		<item name="android:textSize">48sp</item>
+	</style>
 
-    <style name="TitleMedium" parent="TextFontRegular">
-        <item name="android:textSize">32sp</item>
-    </style>
+	<style name="TitleMedium" parent="TextFontRegular">
+		<item name="android:textSize">32sp</item>
+	</style>
 
-    <style name="TitleSmall" parent="TextFontRegular">
-        <item name="android:textSize">24sp</item>
-    </style>
+	<style name="TitleSmall" parent="TextFontRegular">
+		<item name="android:textSize">24sp</item>
+	</style>
 
-    <style name="TitleXSmall" parent="TextFontRegular">
-        <item name="android:textSize">20sp</item>
-    </style>
+	<style name="TitleXSmall" parent="TextFontRegular">
+		<item name="android:textSize">20sp</item>
+	</style>
 
-    <style name="TitleLargeBold" parent="TextFontBold">
-        <item name="android:textSize">48sp</item>
-    </style>
+	<style name="TitleLargeBold" parent="TextFontBold">
+		<item name="android:textSize">48sp</item>
+	</style>
 
-    <style name="TitleMediumBold" parent="TextFontBold">
-        <item name="android:textSize">32sp</item>
-    </style>
+	<style name="TitleMediumBold" parent="TextFontBold">
+		<item name="android:textSize">32sp</item>
+	</style>
 
-    <style name="TitleSmallBold" parent="TextFontBold">
-        <item name="android:textSize">24sp</item>
-    </style>
+	<style name="TitleSmallBold" parent="TextFontBold">
+		<item name="android:textSize">24sp</item>
+	</style>
 
-    <style name="TitleXSmallBold" parent="TextFontBold">
-        <item name="android:textSize">20sp</item>
-    </style>
+	<style name="TitleXSmallBold" parent="TextFontBold">
+		<item name="android:textSize">20sp</item>
+	</style>
 
-    <style name="TextLarge" parent="TextFontRegular">
-        <item name="android:textSize">20sp</item>
-    </style>
+	<style name="TextLarge" parent="TextFontRegular">
+		<item name="android:textSize">20sp</item>
+	</style>
 
-    <style name="TextMedium" parent="TextFontRegular">
-        <item name="android:textSize">16sp</item>
-    </style>
+	<style name="TextMedium" parent="TextFontRegular">
+		<item name="android:textSize">16sp</item>
+	</style>
 
-    <style name="TextSmall" parent="TextFontRegular">
-        <item name="android:textSize">14sp</item>
-    </style>
+	<style name="TextSmall" parent="TextFontRegular">
+		<item name="android:textSize">14sp</item>
+	</style>
 
-    <style name="TextXSmall" parent="TextFontRegular">
-        <item name="android:textSize">13sp</item>
-    </style>
+	<style name="TextXSmall" parent="TextFontRegular">
+		<item name="android:textSize">13sp</item>
+	</style>
 
-    <style name="TextLargeBold" parent="TextFontBold">
-        <item name="android:textSize">20sp</item>
-    </style>
+	<style name="TextLargeBold" parent="TextFontBold">
+		<item name="android:textSize">20sp</item>
+	</style>
 
-    <style name="TextMediumBold" parent="TextFontBold">
-        <item name="android:textSize">16sp</item>
-    </style>
+	<style name="TextMediumBold" parent="TextFontBold">
+		<item name="android:textSize">16sp</item>
+	</style>
 
-    <style name="TextSmallBold" parent="TextFontBold">
-        <item name="android:textSize">14sp</item>
-    </style>
+	<style name="TextSmallBold" parent="TextFontBold">
+		<item name="android:textSize">14sp</item>
+	</style>
 
-    <style name="TextXSmallBold" parent="TextFontBold">
-        <item name="android:textSize">13sp</item>
-    </style>
+	<style name="TextXSmallBold" parent="TextFontBold">
+		<item name="android:textSize">13sp</item>
+	</style>
 
 </resources>

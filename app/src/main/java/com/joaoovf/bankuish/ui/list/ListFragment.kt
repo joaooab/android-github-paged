@@ -20,7 +20,7 @@ class ListFragment : BaseFragment<FragmentListBinding>(FragmentListBinding::infl
 	private val viewModel: ListViewModel by viewModel()
 	private val adapter = ListAdapter {
 		findNavController().navigate(
-			ListFragmentDirections.actionNavigationListToDetailFragment(it)
+			ListFragmentDirections.actionNavigationListToDetailFragment(it.name, it)
 		)
 	}
 
@@ -31,8 +31,16 @@ class ListFragment : BaseFragment<FragmentListBinding>(FragmentListBinding::infl
 
 	private fun setupView() {
 		binding.list.adapter = adapter
+		setupRefresh()
 		collectPagingData()
 		collectStateAdapter()
+	}
+
+	private fun setupRefresh() {
+		binding.refresh.setOnRefreshListener {
+			adapter.retry()
+			binding.refresh.isRefreshing = false
+		}
 	}
 
 	private fun collectStateAdapter() = safeFlowCollect {
@@ -73,7 +81,9 @@ class ListFragment : BaseFragment<FragmentListBinding>(FragmentListBinding::infl
 	}
 
 	private fun isEmptyResult(state: CombinedLoadStates) =
-		state.refresh is LoadState.NotLoading && adapter.itemCount == 0
+		(state.refresh is LoadState.NotLoading
+				|| state.refresh is LoadState.Error)
+				&& adapter.itemCount == 0
 
 	private fun collectPagingData() = safeFlowCollect {
 		viewModel.pagingData.collectLatest {

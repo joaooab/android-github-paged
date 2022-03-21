@@ -1,11 +1,12 @@
 <resources>
 	<string name="app_name">android-challenge-bankuish</string>
+	<string name="list_fragment_title">Repositories</string>
 
 	<string name="retry">Try again</string>
 	<string name="statistic">Statistic</string>
 	<string name="languages">Languages</string>
 	<string name="contributors">Contributors</string>
 
-	<string name="message_items_not_found">Ups… Items not found</string>
+	<string name="message_items_not_found">Ups… No items found </string>
 	<string name="message_paging_error">Something wrong when fetching the repositories</string>
 </resources>
