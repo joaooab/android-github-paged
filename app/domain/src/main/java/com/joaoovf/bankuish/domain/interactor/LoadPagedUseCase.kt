@@ -4,7 +4,7 @@ import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import com.joaoovf.bankuish.domain.model.Project
 import com.joaoovf.bankuish.domain.repository.ProjectRepoistory
-import com.joaoovf.bankuish.domain.source.ShowListSource
+import com.joaoovf.bankuish.domain.source.ProjectListSource
 
 interface LoadPagedUseCase {
 
@@ -18,12 +18,12 @@ class LoadPagedUseCaseImpl(
 
 	override fun invoke(query: String?): Pager<Int, Project> {
 		return Pager(
-			PagingConfig(pageSize = ShowListSource.PAGE_SIZE),
+			PagingConfig(pageSize = ProjectListSource.PAGE_SIZE),
 		) {
-			ShowListSource { page ->
+			ProjectListSource { page ->
 				repository.fetchAll(
 					query,
-					ShowListSource.PAGE_SIZE,
+					ProjectListSource.PAGE_SIZE,
 					page
 				)
 			}

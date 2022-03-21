@@ -8,17 +8,20 @@
 	<fragment
 			android:id="@+id/navigation_list"
 			android:name="com.joaoovf.bankuish.ui.list.ListFragment"
-			android:label="ListFragment"
-			tools:layout="@layout/fragment_list" >
+			android:label="@string/list_fragment_title"
+			tools:layout="@layout/fragment_list">
 		<action
 				android:id="@+id/action_navigation_list_to_detailFragment"
-				app:destination="@id/detailFragment" />
+				app:destination="@id/navigation_detail" />
 	</fragment>
 	<fragment
-			android:id="@+id/detailFragment"
+			android:id="@+id/navigation_detail"
 			android:name="com.joaoovf.bankuish.ui.detail.DetailFragment"
-			android:label="DetailFragment"
-			tools:layout="@layout/fragment_detail" >
+			android:label="{title}"
+			tools:layout="@layout/fragment_detail">
+		<argument
+				android:name="title"
+				app:argType="string" />
 		<argument
 				android:name="project"
 				app:argType="com.joaoovf.bankuish.domain.model.Project" />

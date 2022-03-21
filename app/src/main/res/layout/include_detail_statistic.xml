@@ -31,9 +31,9 @@
 				app:srcCompat="@drawable/ic_outline_star_24"
 				android:layout_marginTop="24dp"
 				android:id="@+id/starCount"
-				app:layout_constraintEnd_toStartOf="@id/forkCount"
-				app:layout_constraintStart_toStartOf="parent"
-				app:layout_constraintTop_toBottomOf="@id/textLanguage" />
+				app:layout_constraintStart_toStartOf="@+id/textStar"
+				app:layout_constraintTop_toBottomOf="@id/textLanguage"
+				app:layout_constraintEnd_toEndOf="@+id/textStar" />
 
 		<androidx.appcompat.widget.AppCompatImageView
 				android:layout_width="wrap_content"
@@ -41,29 +41,29 @@
 				app:srcCompat="@drawable/ic_outline_device_hub_24"
 				android:id="@+id/forkCount"
 				app:layout_constraintTop_toTopOf="@id/starCount"
-				app:layout_constraintStart_toEndOf="@id/starCount"
-				app:layout_constraintEnd_toStartOf="@id/watchCount" />
+				app:layout_constraintStart_toStartOf="@+id/textFork"
+				app:layout_constraintEnd_toEndOf="@id/textFork" />
 
 		<androidx.appcompat.widget.AppCompatImageView
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				app:srcCompat="@drawable/ic_outline_visibility_24"
 				android:id="@+id/watchCount"
-				app:layout_constraintStart_toEndOf="@id/forkCount"
 				app:layout_constraintTop_toTopOf="@id/starCount"
-				app:layout_constraintEnd_toEndOf="parent" />
+				app:layout_constraintEnd_toEndOf="@id/textWatch"
+				app:layout_constraintStart_toStartOf="@id/textWatch" />
 
 		<androidx.appcompat.widget.AppCompatTextView
 				style="@style/TitleSmallBold"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:layout_marginBottom="24dp"
-				app:layout_constraintStart_toStartOf="@+id/starCount"
+				app:layout_constraintStart_toStartOf="parent"
 				app:layout_constraintTop_toBottomOf="@id/starCount"
-				app:layout_constraintEnd_toEndOf="@+id/starCount"
 				tools:text="10"
 				android:id="@+id/textStar"
-				app:layout_constraintBottom_toBottomOf="parent" />
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toStartOf="@id/textFork" />
 
 		<androidx.appcompat.widget.AppCompatTextView
 				style="@style/TitleSmallBold"
@@ -71,8 +71,9 @@
 				android:layout_height="wrap_content"
 				android:id="@+id/textFork"
 				app:layout_constraintTop_toBottomOf="@id/forkCount"
-				app:layout_constraintEnd_toEndOf="@+id/forkCount"
-				app:layout_constraintStart_toStartOf="@+id/forkCount"
+				app:layout_constraintEnd_toEndOf="@id/forkCount"
+				app:layout_constraintStart_toEndOf="@id/textStar"
+				app:layout_constraintEnd_toStartOf="@id/textWatch"
 				tools:text="10"
 				app:layout_constraintBottom_toBottomOf="@id/textStar" />
 
@@ -82,9 +83,9 @@
 				android:layout_height="wrap_content"
 				android:id="@+id/textWatch"
 				app:layout_constraintTop_toBottomOf="@id/watchCount"
-				app:layout_constraintEnd_toEndOf="@id/watchCount"
-				app:layout_constraintStart_toStartOf="@id/watchCount"
+				app:layout_constraintEnd_toEndOf="parent"
 				tools:text="10"
-				app:layout_constraintBottom_toBottomOf="@id/textFork" />
+				app:layout_constraintBottom_toBottomOf="@id/textFork"
+				app:layout_constraintStart_toEndOf="@id/textFork" />
 	</androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
