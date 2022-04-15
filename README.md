@@ -1,4 +1,4 @@
-# android-challenge-bankuish
+# android-github-paged
 
 * Show list of kotlin repositories from github
 * Show detail of a repository
